@@ -1,4 +1,8 @@
-# Python program to implement server side of chat room.
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+""" The simple chat server """
+
 import socket
 import sys
 import threading
@@ -140,5 +144,5 @@ while True:
     th = threading.Thread(target=clientthread, args=(connect, addr))
     th.start()
 
-conn.close()
+connect.close()
 server.close()

@@ -6,10 +6,10 @@ import uuid
 import mysql.connector
 import datetime as dt
 
-connector = mysql.connector.connect(user='robot00_bosyi',
-                                    password='l3nludjl',
-                                    host='91.206.201.198',
-                                    database='robot00_bosyi')
+connector = mysql.connector.connect(user=' ',
+                                    password='  ',
+                                    host=' ',
+                                    database='  ')
 
 
 def get_hashed_password(password):

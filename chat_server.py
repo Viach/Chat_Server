@@ -69,7 +69,7 @@ def clientthread(conn, addr):
 def broadcast(message, conn):
     for user_connection in dict_of_users:
         user_name = dict_of_users[conn]
-        if user_connection != conn and user_name != 'GUEST':
+        if user_connection != conn and (user_name and dict_of_users[user_connection]) != 'GUEST':
             try:
                 user_connection.send(message)
             except:

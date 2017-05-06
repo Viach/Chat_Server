@@ -30,7 +30,7 @@ while chat:
             message = socket.recv(2048).decode()
             if not message:  # server closed
                 chat = False
-                print('Server closed. Bye. ')
+                print('Server closed. Bye.')
                 break
             sys.stdout.write(message)
             sys.stdout.write('\n ')

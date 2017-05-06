@@ -8,6 +8,15 @@ import datetime as dt
 from local_settings import connector
 
 
+#
+# You need to create file with your DB connector. File name: local_settings.py
+# import mysql.connector
+#
+# connector = mysql.connector.connect(user=' ',
+#                                    password=' ',
+#                                    host=' ',
+#                                    database=' ')
+
 def get_hashed_password(password):
     salt = uuid.uuid4().hex
     return hashlib.sha512(salt.encode('utf-8') + password.encode('utf-8')).hexdigest() + ":" + salt

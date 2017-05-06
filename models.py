@@ -3,13 +3,9 @@
 
 import hashlib
 import uuid
-import mysql.connector
 import datetime as dt
 
-connector = mysql.connector.connect(user=' ',
-                                    password='  ',
-                                    host=' ',
-                                    database='  ')
+from local_settings import connector
 
 
 def get_hashed_password(password):
